@@ -1,0 +1,69 @@
+@import "../../../bourbon/bourbon";
+
+@include font-face("BadScript-Regular", "/assets/fonts/BadScriptRegular");
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/templates";
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'BadScript-Regular', sans-serif;
+
+  background: #ccc;
+}
+
+.slider {
+  display: flex;
+  height: 100vh;
+
+  @media screen and (max-width: 700px) {
+    flex-flow: column;
+  }
+}
+
+.slider__item {
+  display: flex;
+
+  font-size: 3em;
+  font-weight: bold;
+
+  color: #fff800;
+  background: url("../i/01.jpg") no-repeat center center;
+
+  background-size: cover;
+
+  align-items: center;
+  flex-basis: 25%;
+  justify-content: center;
+
+  box-shadow: 0 0 2px #f00;
+
+  transition: all .6s ease-in-out;
+  cursor: pointer;
+  @media screen and (max-width: 700px) {
+    font-size: 2em;
+  }
+  &:hover {
+    flex-basis: 100%;
+  }
+
+}
+
+.slider__item-1 {
+  background-image: url('../i/01.jpg');
+}
+
+.slider__item-2 {
+  background-image: url('../i/02.jpg');
+}
+
+.slider__item-3 {
+  background-image: url('../i/03.jpg');
+}
+
+.slider__item-4 {
+  background-image: url('../i/04.jpg');
+}
